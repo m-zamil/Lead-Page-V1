@@ -1,0 +1,384 @@
+/* Global styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+button {
+  cursor: pointer;
+}
+.container {
+  padding: 0 1.25rem;
+}
+.underline {
+  text-decoration: underline;
+}
+.italic {
+  font-style: italic;
+}
+.text-red {
+  color: #da6156;
+}
+.bold {
+  font-weight: bold;
+}
+img {
+  max-width: 100%;
+}
+/* Hero */
+.hero {
+  padding-top: 7.5rem;
+  padding-bottom: 17.625rem;
+  background-image: url('./images/hero-bg.png');
+  background-size: cover;
+  background-position: center bottom;
+}
+/* For browsers that support WebP */
+@supports (--css: variables) {
+  .hero {
+    /* background-image: url('./images/image-3.webp'); */
+  }
+}
+.badge {
+  color: #000;
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  display: inline-block;
+  padding: 0.3125rem 1.25rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.4);
+  max-width: fit-content;
+  margin: 0 auto;
+}
+.badge img {
+  width: 1.5rem;
+  height: auto;
+}
+
+h1 {
+  font-family: 'Reddit Sans', sans-serif;
+  color: #000;
+  text-align: center;
+  font-size: 3.25rem;
+  line-height: 1.19;
+  font-weight: 800;
+  max-width: 65rem;
+  margin: 1.625rem auto 0;
+}
+
+h1 .highlight {
+  line-height: 1;
+  display: inline-block;
+}
+
+.highlight {
+  position: relative;
+  display: inline-block; /* Important for pseudo-element positioning */
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.highlight::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0.3em;
+  background: #ffd54a;
+  z-index: -1;
+}
+
+.cta-btn {
+  color: #000;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 0.375rem;
+  background: #ffd54a;
+  box-shadow: 0rem -0.625rem 0rem 0rem rgba(58, 58, 58, 0.4) inset;
+
+  padding: 2rem 3rem 2.5rem;
+  display: flex;
+  gap: 0.9375rem;
+  align-items: center;
+  justify-content: center;
+  margin: 2.1875rem auto 0;
+  letter-spacing: 0.04em;
+}
+.cta-btn img {
+  filter: drop-shadow(0rem 0.125rem 0rem rgba(0, 0, 0, 0.15));
+  width: 2.6875rem;
+  height: auto;
+}
+.content {
+  padding: 0 5rem;
+  margin-top: 0;
+  padding-bottom: 4.5rem;
+  background-image: url('./images/image-5.jpg');
+}
+.content__image-wrapper {
+  margin-left: -1rem;
+  margin-bottom: -5.65%;
+}
+.content-image {
+  margin-top: -15.3125rem;
+  margin-left: -1.75rem;
+  max-width: 108%;
+}
+
+.text-content {
+  margin-top: 4.625rem;
+  max-width: 43.875rem;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0rem 0rem 1.25rem 0.625rem rgba(0, 0, 0, 0.25);
+  border-radius: 1.25rem;
+  padding-bottom: 1.5625rem;
+}
+.text-content h2 {
+  color: #fff;
+  font-size: 2.25rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  border-radius: 1.25rem 1.25rem 0rem 0rem;
+  background: #da6156;
+  text-align: center;
+  padding-top: 1.625rem;
+  padding-bottom: 2rem;
+}
+.text-content h2 span {
+  font-weight: 800;
+  font-style: italic;
+}
+.text-content ul {
+  list-style: none;
+  padding: 1.875rem 2.0625rem;
+}
+.text-content ul li {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.42;
+  display: flex;
+  gap: 1.125rem;
+  margin-bottom: 1.375rem;
+}
+.text-content ul li:last-child {
+  margin-bottom: 0;
+}
+
+.text-content li::before {
+  content: '';
+  width: 1.75rem;
+  height: 1.75rem;
+  display: inline-block;
+  background-image: url('./images/check-circle.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex-shrink: 0;
+  margin-top: 0.2em;
+}
+.content .cta-btn {
+  font-size: 1.75rem;
+  margin-top: 3.125rem;
+  margin: 0.625rem 1.25rem 0;
+  padding: 1.625rem 2.625rem 1.875rem;
+}
+.cta-wrapper {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 64em) {
+  html {
+    font-size: 0.75rem;
+  }
+  .content .cta-btn {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 48em) {
+  html {
+    font-size: 0.5rem;
+  }
+  .badge {
+    font-size: 1.5rem;
+  }
+  h1 {
+    font-size: 3.25rem;
+  }
+  .text-content {
+    max-width: 50rem;
+  }
+  .content-image {
+    margin-left: -0.5rem;
+    margin-top: -12rem;
+  }
+  .text-content .cta-btn {
+    padding: 1.125rem 1.625rem 1.375rem;
+  }
+  .hero {
+    padding-bottom: 15rem;
+  }
+}
+@media (max-width: 31.25em) {
+  .content .cta-btn {
+  }
+  .text-content li::before {
+    margin-top: 0.1em;
+  }
+  .cta-btn {
+    padding: 2rem 1rem 2.5rem;
+  }
+  .hero {
+    padding-bottom: 10rem;
+  }
+  .content-image {
+    margin-top: -8rem;
+  }
+  .content__image-wrapper {
+    margin-bottom: 0;
+  }
+}
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.modal-content {
+  background: white;
+  overflow: hidden;
+  max-width: 46.5rem;
+  width: 90%;
+  position: relative;
+  z-index: 10;
+  border: 0.0625rem solid black;
+}
+
+.modal-form {
+  padding: 1.25rem;
+  padding: 0 3rem 4rem;
+
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 2.3125rem;
+  height: auto;
+  background-color: #ebebeb;
+  line-height: 0;
+}
+.close-btn img {
+  width: 2.3125rem;
+  height: auto;
+}
+.modal-image {
+  text-align: center;
+  margin: 3rem auto 0;
+  max-width: 50%;
+}
+
+h3 {
+  font-family: 'Reddit Sans';
+  font-size: 2rem;
+  margin-top: 3.375rem;
+  text-align: center;
+  padding: 0 2.5rem;
+  font-weight: 800;
+  max-width: 36rem;
+  margin: 2.5rem auto 0;
+  line-height: 1.2;
+}
+.modal-form p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: 1.25rem;
+  text-align: center;
+  color: #4a4a4a;
+}
+
+.form {
+  margin-top: 1.25rem;
+}
+.input-wrapper {
+  display: flex;
+  gap: 1.125rem;
+  margin-top: 3.125rem;
+}
+
+form input {
+  width: 100%;
+  margin-bottom: 1.25rem;
+  border: 0.0625rem solid #c8c8c8;
+  background: #eee;
+  padding: 1.0625rem 1.25rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.875;
+  color: #5a5a5a;
+}
+
+.submit-btn {
+  background-color: #ffd54a;
+
+  color: #000;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.67;
+
+  padding: 1.0625rem 1.25rem;
+  border: none;
+  border-radius: 0.1875rem;
+  cursor: pointer;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+}
+.submit-btn img {
+  width: 1.625rem;
+  height: auto;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Launch Software Business</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/main.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+          <div class="badge"><img src="./assets/images/whatshot.svg" alt="" /> Free Video Training Reveals Secret Strategy To…</div>
+          <h1>Launch Your Own <span class="highlight"> $15,000 per Month</span><span class="highlight">Software Business</span> Without Any Technical or Marketing Skills</h1>
+          <button class="cta-btn" id="openModalBtn"><img src="./assets/images/play-icon.svg" alt="" /> WATCH THE FREE TRAINING VIDEO</button>
+        </div>
+      </div>
+    </div>
+    <!-- Content Section -->
+
+    <div class="content">
+      <div class="content__image-wrapper">
+        <picture>
+          <!-- <source srcset="./assets/images/image-1.webp 1x, ./assets/images/image-1-2x.webp 2x" type="image/webp" />
+        <source srcset="./assets/images/image-1.jpg 1x, ./assets/images/image-1-2x.png 2x" type="image/png" /> -->
+          <img src="./assets/images/image-4.png" alt="Training Video" class="content-image" />
+        </picture>
+      </div>
+
+      <div class="text-content">
+        <h2>With our <span>secret strategy</span></h2>
+        <ul>
+          <li><span>You’ll never waste thousands of dollars hiring developers</span></li>
+          <li><span>You'll never waste months trying to build software</span></li>
+          <li
+            ><span>You can launch your first software and start making real money within <strong>48 hours</strong> – this is the fastest road to profit!</span></li
+          >
+          <li
+            ><span>You <span class="bold text-red">DO NOT</span> need special programming or marketing skills, everything is <strong>PLUG n’ PLAY</strong> easy (even a dummy can do it)</span></li
+          >
+          <li
+            ><span><span class="text-red bold">SPECIAL BONUS:</span> <span class="underline">exclusive access to our secret franchising program</span> that will <strong>launch your first software in 24 hours. </strong></span></li
+          >
+        </ul>
+        <div class="cta-wrapper">
+          <button class="cta-btn" id="openModalBtnSecondary"><img src="./assets/images/play-icon.svg" alt="" /> WATCH THE FREE TRAINING VIDEO</button>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Section -->
+    <div class="modal" id="modal">
+      <div class="modal-overlay" id="modalOverlay"></div>
+      <div class="modal-content">
+        <button class="close-btn" id="closeModalBtn"><img src="./assets/images/close-icon.svg" alt="" /></button>
+
+        <div class="modal-image">
+          <img src="./assets/images/modal-illustration.svg" alt="" />
+        </div>
+        <h3>Enter Your Details to Access The Secret Training Video.</h3>
+        <div class="modal-form">
+          <p>Your information is secure and will not be shared with anyone.</p>
+          <form class="form">
+            <div class="input-wrapper">
+              <input type="text" placeholder="First Name" required />
+              <input type="email" placeholder="Email Address" required />
+            </div>
+            <button type="submit" class="submit-btn">Send The Video To My Email <img src="./assets/images/icon-1.svg" alt="" /></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/main.js"></script>
+  </body>
+</html>
