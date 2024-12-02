@@ -41,7 +41,7 @@ img {
 /* For browsers that support WebP */
 @supports (--css: variables) {
   .hero {
-    /* background-image: url('./images/image-3.webp'); */
+    background-image: url('./images/hero-bg.webp');
   }
 }
 .badge {
@@ -128,6 +128,12 @@ h1 .highlight {
   margin-top: 0;
   padding-bottom: 4.5rem;
   background-image: url('./images/image-5.jpg');
+}
+/* For browsers that support WebP */
+@supports (--css: variables) {
+  .content {
+    background-image: url('./images/image-5.webp');
+  }
 }
 .content__image-wrapper {
   margin-left: -1rem;
